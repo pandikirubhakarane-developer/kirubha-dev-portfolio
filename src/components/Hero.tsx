@@ -1,15 +1,26 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, Github, Linkedin, Download } from "lucide-react";
-import profileImage from "@/assets/profile-placeholder.png";
+import { Mail, Phone } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={profileImage} 
+          alt="" 
+          className="w-full h-full object-cover object-top opacity-15 blur-sm scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+      </div>
       
-      <div className="container mx-auto px-6 py-20">
+      {/* Gradient orbs */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl z-0" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl z-0" />
+      
+      <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Profile Image */}
           <motion.div
@@ -22,9 +33,11 @@ const Hero = () => {
               <img 
                 src={profileImage} 
                 alt="Pandi Kirubhakaran Eswaran" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
+            {/* Decorative ring */}
+            <div className="absolute -inset-3 rounded-full border border-primary/20 animate-pulse" />
           </motion.div>
 
           {/* Content */}
