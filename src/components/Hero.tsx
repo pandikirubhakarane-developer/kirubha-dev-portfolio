@@ -1,43 +1,40 @@
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
-import profileImage from "@/assets/profile.jpg";
+// Replace mock image here: Update this import with your actual profile image
+import profileImage from "@/assets/profile-placeholder.png";
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={profileImage} 
-          alt="" 
-          className="w-full h-full object-cover object-top opacity-15 blur-sm scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
-      </div>
-      
-      {/* Gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl z-0" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl z-0" />
+      {/* Background gradient orbs */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          {/* Profile Image */}
+          {/* Profile Image - Replace mock image here */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden gradient-border glow animate-pulse-glow">
+            {/* Blurred background glow effect */}
+            <div className="absolute inset-0 w-64 h-64 md:w-80 md:h-80 rounded-full bg-primary/20 blur-2xl scale-110" />
+            
+            {/* Profile image container */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden gradient-border glow animate-pulse-glow shadow-2xl">
+              {/* Replace mock image here: Change the image source below */}
               <img 
                 src={profileImage} 
                 alt="Pandi Kirubhakaran Eswaran" 
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover"
               />
             </div>
-            {/* Decorative ring */}
-            <div className="absolute -inset-3 rounded-full border border-primary/20 animate-pulse" />
+            
+            {/* Decorative outer ring */}
+            <div className="absolute -inset-3 rounded-full border border-primary/20" />
+            <div className="absolute -inset-6 rounded-full border border-primary/10" />
           </motion.div>
 
           {/* Content */}
