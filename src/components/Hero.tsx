@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 // Replace mock image here: Update this import with your actual profile image
-import profileImage from "@/assets/profile-placeholder.png";
+import profileImage from "@/assets/Gemini_Generated_Image_7eha187eha187eha.png";
 
 const Hero = () => {
   return (
