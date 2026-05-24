@@ -73,7 +73,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
             >
-              2.5+ years of experience building scalable web applications. 
+              3+ years of experience building scalable web applications. 
               Specialized in React, Next.js, and Node.js. Available for freelance projects.
             </motion.p>
 
@@ -85,7 +85,7 @@ const Hero = () => {
               className="flex flex-wrap justify-center lg:justify-start gap-8 mb-8"
             >
               <div className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-gradient">2.5+</p>
+                <p className="text-3xl md:text-4xl font-bold text-gradient">3+</p>
                 <p className="text-muted-foreground text-sm">Years Experience</p>
               </div>
               <div className="text-center">
